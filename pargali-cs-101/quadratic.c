@@ -5,35 +5,43 @@ int main()
 {
     int a, b, c;
 
-    printf("You have an equation that looks like\n Ax^2 + Bx + C");
+    printf("You have an equation that looks like Ax² + Bx + C\n\n");
 
-    printf("\nEnter the value of A: ");
+    printf("Enter the value of A: ");
     scanf("%d", &a);
 
-    printf("\nEnter the value of B: ");
+    printf("Enter the value of B: ");
     scanf("%d", &b);
 
-    printf("\nEnter the value of C: ");
+    printf("Enter the value of C: ");
     scanf("%d", &c);
+
+    printf("\nYour equation is %dx² + %dx + %d\n", a, b, c);
+
+    if (a == 0 || b == 0)
+    {
+        printf("Error, invalid equation");
+        return 0;
+    }
 
     double delta = b * b - (4 * a * c);
     if (delta > 0)
     {
-        double x1 = ((-b + sqrt(delta))) / (2 * a);
-        double x2 = ((-b - sqrt(delta))) / (2 * a);
+        float x1 = ((-b + sqrt(delta))) / (2 * a);
+        float x2 = ((-b - sqrt(delta))) / (2 * a);
 
-        printf("Root 1\t Root 2\n");
-        printf("%.1lf\t %.1lf", x1, x2);
+        printf("\nRoot 1\t Root 2\n");
+        printf("%.2f\t %.2f\n\n", x1, x2);
     }
 
     else if (delta == 0)
     {
-        double x = -b / (2 * a);
-        printf("The single root: %.2lf\n", x);
+        float x = -b / (2 * a);
+        printf("\nThe single root: %.2f\n", x);
     }
     else
     {
-        printf("Doesnt have a real solution");
+        printf("\nDoesnt have a real solution\n");
     }
 
     return 0;

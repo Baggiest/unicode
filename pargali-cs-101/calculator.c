@@ -1,3 +1,4 @@
+//                                     Mani Ehsani Sohi 
 #include <stdio.h>
 #include <math.h>
 
@@ -11,10 +12,10 @@ int main()
     printf("2. Subtraction\n");
     printf("3. Multiplication\n");
     printf("4. Division\n");
-    printf("5. Sine (in radians)\n");
-    printf("6. Cosine (in radians)\n");
-    printf("7. Inverse Sine (in radians)\n");
-    printf("8. Inverse Cosine (in radians)\n");
+    printf("5. Sin\n");
+    printf("6. Cosin\n");
+    printf("7. Inverse Sin\n");
+    printf("8. Inverse Cosin\n");
     printf("Please enter your choice (1-8): ");
 
     scanf("%d", &choice);
@@ -66,7 +67,7 @@ int main()
         break;
 
     case 7:
-        printf("Enter your value in radians: ");
+        printf("Enter your value (between -1 and 1): ");
         scanf("%lf", &num1);
         if (num1 >= -1 && num1 <= 1)
         {
@@ -80,7 +81,7 @@ int main()
         break;
 
     case 8:
-        printf("Enter your value in radians: ");
+        printf("Enter your value (between -1 and 1): ");
         scanf("%lf", &num1);
 
         if (num1 >= -1 && num1 <= 1)
