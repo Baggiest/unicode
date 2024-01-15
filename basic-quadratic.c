@@ -17,23 +17,23 @@ int main()
     scanf("%d", &c);
 
     double delta = b * b - (4 * a * c);
+
     if (delta > 0)
     {
-        double x1 = ((-b + sqrt(delta))) / (2 * a);
-        double x2 = ((-b - sqrt(delta))) / (2 * a);
-
-        printf("Root 1\t Root 2\n");
-        printf("%.1lf\t %.1lf", x1, x2);
+        double root1 = (-b + sqrt(delta)) / (2 * a);
+        double root2 = (-b - sqrt(delta)) / (2 * a);
+        printf("Root 1: %.2lf\n", root1);
+        printf("Root 2: %.2lf\n", root2);
     }
 
     else if (delta == 0)
     {
-        double x = -b / (2 * a);
-        printf("The single root: %.2lf\n", x);
+        double root = -b / (2 * a);
+        printf("Root: %.2lf\n", root);
     }
     else
     {
-        printf("Doesnt have a real solution");
+        printf("no real solution");
     }
 
     return 0;
