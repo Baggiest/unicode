@@ -5,34 +5,25 @@
 int main()
 
 {
-    int inputNum;
-    int dividable = 1;
-    // using int instead of bool to avoid importing unnecessary stdbool.h
+    int inputNum, binary[64];
+    // allocating 64 'cause we havent learned dynamic programming yet
 
     printf("Enter a whole number: ");
     scanf("%d", &inputNum);
     // getting the input arguments
 
-    int *output;
-
     int i = 0;
-    while (dividable)
+    while (inputNum > 0)
     {
-        if (inputNum == 0)
-        {
-            dividable = 0;
-            break;
-            // first line sets dividable to false
-            // the break line prevents the cycle from running the rest of the while loop
-            // break isnt necessary but without it our base 2 output would begin with a 0 as its MSB
-        }
-
-        printf("%d\t %d \n", inputNum / 2, inputNum % 2);
-        // printf("%d", inputNum % 2);
-        // output[i++] = inputNum % 2;
-        
-        printf("\n%d\n" , i++);
+        binary[i] = inputNum % 2;
         inputNum /= 2;
+        i++;
     }
-    printf("your string output is %s", output);
+
+    for (int j = i - 1; j >= 0; j--)
+    {
+        printf("%d", binary[j]);
+    }
+    
+    printf("\n");
 }
