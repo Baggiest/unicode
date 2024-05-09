@@ -20,7 +20,7 @@ int main()
     while (getInput)
     {
         printf("enter the [%d] number: ", i);
-        scanf("%f.2", &input);
+        scanf("%.2f", &input);
 
         if (input == -1)
         {
@@ -28,7 +28,7 @@ int main()
         }
 
         *(inputArray + i) = input;
-        printf("%f.2 \n", *(inputArray + i));
+        printf("%.2f \n", *(inputArray + i));
         i++;
     }
 
