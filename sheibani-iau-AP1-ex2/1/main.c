@@ -20,7 +20,7 @@ int main()
     while (getInput)
     {
         printf("enter the [%d] number: ", i);
-        scanf("%.2f", &input);
+        scanf("%f", &input);
 
         if (input == -1)
         {
@@ -63,4 +63,6 @@ int main()
         sum += *(inputArray + n);
     }
     printf("Average: %.2f \n", sum / arrLen);
+
+    free(inputArray);
 }
